@@ -1,0 +1,36 @@
+<a href="#/">back to home</a>
+
+<h3>movie details</h3>
+
+<div class="posterImg">
+  <img ng-src="http://image.tmdb.org/t/p/w185/{{data.poster_path}}" />
+</div>
+
+<div id="details">
+  <p>
+    <label>title:</label> {{data.title}}
+    <br> {{data.tagline}}
+  </p>
+
+  <p>
+    <label>movie id #:</label> {{movieId}}
+  </p>
+
+  <p>
+    <label>genre:</label> <span ng-repeat="genre in data.genres">| {{genre.name}} | </span>
+  </p>
+
+  <p>
+    <label>release date:</label> {{data.release_date}}
+  </p>
+
+  <p>
+    <label>plot:</label> {{data.overview}}
+  </p>
+
+  <p>
+    <label>runtime:</label> {{data.runtime}}
+  </p>
+
+  <a ng-show="data.homepage" href="{{data.homepage}}">movie homepage</a>
+</div>

@@ -1,0 +1,8 @@
+<h3>now playing</h3>
+
+<a ng-repeat="result in movie.results" href="#{{result.id}}"><img ng-src="http://image.tmdb.org/t/p/w185/{{result.poster_path}}"/></a>
+
+
+<br>
+<br>
+<button ng-click="getMoreMovies()">more movies</button>
